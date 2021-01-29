@@ -1,0 +1,22 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: dubbo-provider
+
+dubbo:
+  application:
+    # 应用名称
+    name: dubbo-provider
+  scan:
+    # 接口实现者（服务实现）包
+    base-packages: com.cctv.service.impl
+  registry:
+    # 注册中心信息
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    # 协议名称
+    name: dubbo
+    # 协议端口
+    port: 20880
